@@ -65,15 +65,16 @@ function renderTable(data) {
             const td = document.createElement('td');
 
             if (index >= 3 && index <= 7) {
-                const img = document.createElement('img');
-                img.src = cell;
-                img.alt = `Finger ${index - 1}`;
-                img.style.width = '100px'; // Set width to auto for actual size
-                img.style.height = '100px'; // Set height to auto for actual size
-                img.style.transform = 'scaleX(-1)'; // Mirror horizontally
-                img.style.filter = 'invert(100%)'; // Color invert
-                td.appendChild(img);
-            } else {
+    const img = document.createElement('img');
+    img.src = cell;
+    img.alt = `Finger ${index - 1}`;
+    img.style.width = '100px'; // Set width to auto for actual size
+    img.style.height = '100px'; // Set height to auto for actual size
+    img.style.transform = 'scaleX(-1)'; // Mirror horizontally
+    img.style.filter = 'contrast(120%) invert(100%)'; // Contrast and color invert
+    td.appendChild(img);
+}
+   else {
                 td.textContent = cell;
             }
 
